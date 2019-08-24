@@ -1,0 +1,5 @@
+export const projectActions = {
+    SET_STAGE_ACTIVE : "SET_STAGE_ACTIVE",
+    SET_PROJECT_DATA : "SET_PROJECT_DATA",
+    TOGGLE_DIALOG : "TOGGLE_DIALOG"
+}

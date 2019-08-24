@@ -1,25 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter as Router,Route,Switch} from 'react-router-dom'
+import Topbar from 'components/Topbar/Topbar'
+import Menu from 'components/Menu/Menu'
 
-function App() {
+import './App.scss'
+
+import * as Routes from '_constants/routing'
+
+import Home from 'components/Home/Home'
+import Projects from 'components/Projects/Projects'
+import Settings from 'components/Settings/Settings'
+import Project from 'components/Project/Project'
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Topbar />
+      <Menu />
+      <Route exact path={Routes.HOME} component={Home}/>
+      <Route exact path={Routes.PROJECTS} component={Projects}/>
+      <Route exact path={Routes.SETTINGS} component={Settings}/>
+      <Route exact path={Routes.PROJECT} component={Project}/>
+    </Router>
   );
 }
 

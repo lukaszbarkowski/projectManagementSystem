@@ -1,0 +1,5 @@
+export const projectsActions = {
+    SET_ACTIVE_PROJECT : "SET_ACTIVE_PROJECT",
+    SET_PROJECTS_LIST: "SET_PROJECTS_LIST",
+    ADD_PROJECT:"ADD_PROJECT"
+}
